@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<body onload="ani_string('target')">
+    <pre id="target">JavaScript </pre>
+    <script>
+        // function ani_string(id){
+        //     const el = document.getElementById(id);
+        //     let textNode = el.childNodes[0]; // 자식 요소들
+        //     let text = textNode.data; // 자식요소들의 텍스트 배열
+            
+        //     setInterval(function(){
+        //     text = text[text.length - 1] + text.substring(0, text.length -1);
+        //     textNode.data = text;
+        // },100)
+        // }
+        function ani_string(id){
+            const el = document.getElementById(id);
+            let textNode = el.childNodes[0]; // 자식 요소들
+            let text = textNode.data; // 자식요소들의 텍스트 배열
+            
+            setInterval(function(){
+            text = text.substring(1, text.length) + text[0];
+            textNode.data = text;
+        },100)
+        }
+        
+    </script>
+
+
+    <!-- <div class="parent">텍스트
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <span class="child3"></span>
+    </div>
+    <script>
+        const el = document.querySelector('.parent');
+        console.log(el.childNodes);
+    </script> -->
+</body>
+</html>

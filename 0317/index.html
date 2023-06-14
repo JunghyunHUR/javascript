@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="q1">
+    <button type="button" onclick="val()">1번문제</button>
+    <div id="result1"></div>
+
+    <input type="text" id="q2">
+    <button type="button" onclick="val2()">2번문제</button>
+    <div id="result2"></div>
+
+    <input type="text" id="s">
+    <button type="button" onclick="val9()">9번문제</button>
+    <div id="result9"></div>
+    
+    <script>
+        function val(){
+            let q = document.getElementById('q1').value;
+            const regex = /html$/;
+            const result = q.match(regex);
+            console.log(result);
+            if(result == null){
+                document.getElementById('result1').innerHTML = 'html파일이 아닙니다.';
+            }else{
+                document.getElementById('result1').innerHTML = 'html파일 입니다.';
+            }
+            
+        }
+        
+        function val2(){
+            let q = document.getElementById('q2').value;
+            const regex = /(\d{1,})/;
+            const result = q.match(regex);
+            console.log(result);
+        }
+
+        function val9(){
+            let s = document.getElementById('s').value;
+            let n = 0;
+            let n2 = 0;
+            for(let i = 0; i < s.length ; i++){
+                let lowercase = s.toLowerCase();
+                let p = lowercase[i];
+                if(p === 'p'){
+                    n += 1;
+                }
+            }
+            for(let i = 0; i < s.length ; i++){
+                let lowercase = s.toLowerCase();
+                let p = lowercase[i];
+                if(p === 'y'){
+                    n2 += 1;
+                }
+            }
+            console.log('p의 갯수 :'+n);
+            console.log('y의 갯수 :'+n2);
+            console.log('총 문자의 갯수 :'+s.length);
+            if(s.length <= 50){
+                if(n==n2 || n == 0 && n2 == 0){
+                    console.log(true);
+                    document.getElementById('result9').innerHTML = true;
+                }else{
+                    console.log(false);
+                    document.getElementById('result9').innerHTML = false;
+                }
+            }else{
+                console.log(false);
+                document.getElementById('result9').innerHTML = false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+             width: 1200px;
+             margin:0 auto;
+        }
+        a.logo{
+            display: block;
+            width: 120px;
+            height: 50px;
+            font-size: 40px;
+            text-decoration: none;
+            color: #848484;
+            font-weight: bold;
+            float: left;
+            margin-right: 100px;
+        }
+        nav ul.navi{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navi>li{
+            position: relative;
+        }
+        .navi>li>a{
+            color: #848484;
+            text-decoration: none;
+            line-height: 50px;
+            justify-content: space-between;
+        }
+        .sub{
+            display: none;
+            position: absolute;
+            background: #fff;
+            z-index: 100;
+            width: 200px;
+        }
+        .banner{
+            width: 100%;
+            height: 400px;
+            background:pink;
+            color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .banner p{
+            font-size: 78px;
+            text-align: center;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".navi>li").hover(function(){
+                $(this).find(".sub").fadeToggle();
+            });
+            $(".title1").html("제목입니다.<small>진짜</small>");
+            $("form").submit(function(event){
+                event.preventDefault();
+                if($("#username").val() ==""){
+                    alert("이름을 입력하세요.")
+                    return;
+                }
+                if($("#userpass").val() ==""){
+                    alert("비밀번호를 입력하세요.")
+                    return;
+                }
+                $("form").submit;
+            });
+            $(".logo").click(function(e){
+                e.preventDefault();
+                let link = $(".logo").attr("href", "https://google.com");
+            });
+            
+            /**
+             * 마우스 올릴때 : mouseenter, mouseover
+             * 마우스 떠날때 : mouseleave, mouseout
+             * 마우스를 올릴때+떠날때 : hover
+             * /
+            /*
+            hide show toggle 
+            $(선택자).animate({키:값}, 시간, function(){실행문})
+            $(선택자).css(fds,fdsfds).animate() - 체이닝 기법
+            */
+        //    $("p1").click(function(){
+        //     $(this).css("color", "green").sliceUp(2000).sliceDown(2000);
+        //    });
+        /*
+          get --    set --
+          $(선택자).text("내용");set
+          변수 = $(선택자).text(); get 
+
+          $(선택자)
+        */
+
+        }); //Jquery
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="https://naver.com" class="logo">LOGO</a>
+            <ul class="navi">
+                <li><a href="#">메뉴1</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </nav>
+    </div>
+    <div class="banner">
+        <p>Banner</p>
+    </div>
+    <section class="main1">
+        <div class="container">
+            <h1 class="title1"></h1>
+            <form>
+            <input type="text" id="username">
+            <input type="password" id="userpass">
+            <button type="submit">전송</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

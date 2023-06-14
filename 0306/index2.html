@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 1번 문제
+        // document.write(document.URL +'<br>');
+
+        // // 2번 문제
+        // const fileName = prompt('파일명을 입력하시오');
+        // document.write(fileName.split('.').pop()+'<br>');
+        
+        {// 3번 문제
+            let x = prompt('숫자를 입력하시오.');
+
+            function df(n){
+                if(n <= 13){
+                    return 13 -n;
+                }else{
+                    return (n - 13)*2;
+                }
+            }
+            document.write(df(x)+'<br>');
+        }
+
+        {// 4번 문제
+            let x = parseInt(prompt("첫번째"));
+            let y = parseInt(prompt("두번째"));
+            function sutoAdd(n1, n2){
+                if(x===y){
+                    return 3*(n1+n2);
+                }else{
+                    return (n1+n2);
+                }
+            }
+            document.write(sutoAdd(x,y)+'<br>');
+        }
+        {// 5번 문제
+            let x = parseInt(prompt("첫번째"));
+            let y = parseInt(prompt("두번째"));
+            function add2(n1, n2){                
+                return (n1 === 50 || n2 === 50 || (n1+n2 === 50));
+            }
+            document.write(add2(x,y));
+        }
+        
+    </script>
+</body>
+</html>

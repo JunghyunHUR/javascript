@@ -1,0 +1,47 @@
+Jquery
+
+부모
+parent()
+parents()
+parentsUntil()
+
+자식
+children()
+find()
+
+형제
+siblings()
+
+아래 태그
+next()
+nextAll()
+nextUntil()
+
+위 태그
+prev()
+prevAll()
+prevUntil()
+
+가상요소
+$('태그').first().
+$('태그').last().
+$('태그').eq(0). =>배열순서
+
+
+AJAX
+- Asynchronous (비동기식)
+- Javascrip
+- And
+- XML (x) - json ===object
+
+JSON.stringify()
+JSON.parse()
+
+
+
+
+
+
+
+
+

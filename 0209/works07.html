@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .now{
+            font-size: 25px;
+        }
+        #now{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p class="now">지금 시간은 <span id="now">00시 00분 00초</span>입니다.</p>
+    <script>
+        //시간 get..... 분 get..... 초 get.....
+        //getHours();   getMinutes();  getSeconds();
+        setInterval(myTimes,1000);
+        function myTimes(){
+        let dt = new Date();
+        let h = dt.getHours();
+        let m = dt.getMinutes();
+        let s = dt.getSeconds();
+        let nowTimes = h+"시"+m+"분"+s+"초";
+        document.getElementById("now").innerHTML = nowTimes;
+        };
+    </script>
+    
+</body>
+</html>

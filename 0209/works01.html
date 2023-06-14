@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        1. 프롬프트 참으로 영문 이름을 물어보고
+            사용자가 소문자 대문자 어떤것을 썻던간에 화면에 대문자로 출력하라.
+        2. 마지막 전화번호를 물어 본 후 마지막 4자를 ***로 바꾸어 출력하라.
+        010-1111-1111 => 010-1111-****
+
+        */
+       const username = prompt("당신의 영문 이름은 무엇입니까?");
+       document.write(username.toUpperCase(), "<br>");
+       const userTel = prompt("당신의 연락처는 무엇입니까?");
+       document.write(userTel.substring(0,userTel.length-4)+"****");
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

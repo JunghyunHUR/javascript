@@ -1,0 +1,25 @@
+Jquery
+
+addClass
+removeClass
+toggleClass
+
+hasClass - 클래스가 있는지 확인
+$('선택자').css("속성","속성값")
+$('div').css("color","blue")
+         .css("backgroung-color","yellow");
+$("div").css({
+     fontSize : "30px",
+     color : "blue",
+     backgoundColor : "yellow"
+});
+let s = $("div").css("display");
+
+
+
+
+
+
+
+
+

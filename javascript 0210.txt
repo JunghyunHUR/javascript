@@ -1,0 +1,59 @@
+javascript
+
+1. 화면에 출력되도록 1,2 의 코드를 완성하라
+
+let phoneNum = "010-1234-5678";
+let result_1 = phoneNum.substring(1);
+document.write(result_1,"****<br>");
+
+let imgSrc = "images/bnt_out.jpg";
+let result_2 = imgSrc.replace(2);
+document.write(result_2, "<br>");
+
+화면 출력 내용 : 010-1234-****, images/bnt_over.jpg
+
+2. 배열객체와 수학객체를 이용해 코드를 작서하자.
+점심시간에 짜장면, 돈가스, 된장국, 김치찌개, 회덮밥 중 어떤 메뉴로 선택할지 고민이 
+된다면 랜덤으로 선택하도록 하자
+
+
+
+-반응형 웹:
+-적응형 웹:
+
+1. 기본 플랫폼 - Mozilla/5.0 
+2. 운영체제 정보 - (Windows NT 10.0; Win64; x64)
+3. 사용중인 브라우저 엔진 - AppleWebKit/537.36 (KHTML, like Gecko) 
+4. 사용중인 브라우저 - Chrome/110.0.0.0 
+5. 같은 엔진을 사용중이며 호환 가능한 다른 브라우저 - Safari/537.36
+
+history 객체 속성 종류
+
+history.back() - 이전 방문 사이트로 이동
+history.forward() - 다음 방문 사이트로 이동
+history.go(숫자) - -2를 입력하면 2단계 이전 사이트로 방문
+history.length() - 방문기록에 저장된 목록의 구를 반환
+
+숙제
+
+웹브라우저의 운영체제와 모니터의 크기를 구하여 화면에 출력시키세요.
+
+ex) 윈도우 - 1200px x 800px
+     애플 - 1980px x 1200px
+     아이폰 -
+     안드로이드 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

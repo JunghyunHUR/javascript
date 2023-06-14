@@ -1,0 +1,106 @@
+javasript
+
+p id = "demo"
+
+버튼을 누르면 id demo 인 요소에 날짜를 입력하세요.
+Date()
+
+이벤트
+click
+mouseover
+mouseout
+
+mouseenter
+mouseleave
+
+blur
+focus
+keydown
+keyup
+keypress
+
+load
+unload
+
+객체 매소드 종류
+  종류                                                     설명
+Open(url,"새창이름", "새창옵션")        url페이지를 새 창에서 연다.
+                                                     -새창옵션
+                                                     width=숫자, height=숫자, left=숫자, top=숫자
+                                                     scrollbars = yes or no
+                                                     *location=yes or no (url주소창 숨김, 노출)
+                                                     status = yes or no (상태표시줄 영역 숨김, 노출)
+                                                     toolbars = yes or no (도구상자영역 숨김, 노출)
+                                                     웹브라우저에서 기본설정에서 새창을 차단하는 경우가 많다.
+
+alert(date), prompt(질문),                  질의 응답등을 경고창으로 나타낸다.
+confirm(질문)
+
+moveTo(x,y)                                    지정한 새 창의 위치를 이동
+
+resizeTo(width, height)                     지정한 새 창의 크기를 변경
+
+setIneterval(function(코드), 시간)        지속적으로 일정한 시간 간격으로 함수를 계속 호출한다.
+
+setTimeOut(function(코드), 시간)        단 한번 일정한 시간 간격으로 함수를 호출한다.
+
+
+
+
+window.close();
+
+페이지를 새창으로 열고 새창에 닫기 버튼을 넣어 닫아 보시오.
+
+
+setInterval(함수, 시간)
+
+
+
+
+
+
+clearinterval()
+
+
+
+
+
+Screen 객체 매소드 종류
+종류
+screen.avail(Height) - 화면의 높이(작업표시 제외)
+screen.avail(Width) - 화면의 너비(작업표시 제외)
+screen.height - 화면의 높이
+screen.width - 화면의 너비
+screen.colorDepth - 컬러 색상 수
+screen.pixelDepth - 픽셀당 비트 수
+
+
+location 객체 매소드 종류
+location.속성 // location.매소드()
+
+location.href - 창조주소를 설정하거나 URL을 반환 
+//파라미터창 전체 주소 또는 해당 페이지로 이동
+
+location.hash - URL의 해시값(#)을 반환
+//예)http://demo.com/main/#main
+
+location.hostname - URL호스트 이름을 설정하거나 반환
+//http://host.com
+
+location.host - URL의 이름과 포트번호를 반환
+//http://host.com:80
+
+location.protocol -  URL의 프로토콜을 반환
+//http://host.com:80
+
+location.search - URL의 쿼리를 반환
+//key=value&key2=value&key3=value
+
+location.reload() - F5를 누른 것 처럼 브라우저를 새로고침
+
+
+
+www 기본적인 포트번호 80
+
+
+

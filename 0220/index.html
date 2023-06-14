@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: block;
+            border: 2px solid #ccc;
+            color: #ccc;
+            padding: 8px;
+            margin: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            //siblings => 형제
+            /* 
+            next
+            nextAll
+            nextUntil
+
+            prev()
+            prevAll()
+            prevUntil
+
+            */
+            //parent()=>부모, parents()=>조상, parentsUntill()=>조상중 ..까지
+            // $('span').parentsUntil('div').css({
+            //     'color':'red',
+            //     'border':'2px solid red'
+            // });
+            // children, find
+            // $('div').children().css({
+            //     'border' : '2px solid red'
+            // });
+            // $('h2').next().css({
+            //    'color':'red',
+            //    'border': '2px solid red'
+            // });
+            $('div').not('.box').css({
+                'background' : 'yellow'
+            });
+            // first(), last(), eq()
+            //filter(), not()
+        });//jquery
+    </script>
+</head>
+<body>
+    <div>
+        박스1
+    </div>
+    <div class="box">
+        박스2
+    </div>
+    <div>
+        박스3
+    </div>
+    <div>
+        박스4
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Jquery
+
+hide()     show()     toggle()
+
+slideDown slideUp slideToggle()
+fadeIn() fadeOut() fadeToggle() fadeTo()
+
+{키 : 값, 키1 :값1}
+애니메이션 jquery
+$(선택자).animate({
+ params
+}500, callbacks);

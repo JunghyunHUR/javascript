@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="q1_num1">
+    <input type="text" id="q1_num2">
+    <input type="text" id="q1_num3">
+    <button type="button" onclick="val1()">1번문제</button>
+    <div id="result1"></div>
+
+    <input type="text" id="q2_num1">
+    <input type="text" id="q2_num2">
+    <button type="button" onclick="val2()">2번문제</button>
+    <div id="result2"></div>
+
+    <input type="text" id="q3_num1">
+    <input type="text" id="q3_num2">
+    <button type="button" onclick="val3()">3번문제</button>
+    <div id="result3"></div>
+
+    <input type="text" id="q4_num1">
+    <input type="text" id="q4_num2">
+    <button type="button" onclick="val4()">4번문제</button>
+    <div id="result4"></div>
+
+    <input type="text" id="q5_str1">
+    <input type="text" id="q5_str2">
+    <button type="button" onclick="val5()">5번문제</button>
+    <div id="result5"></div>
+
+    <input type="text" id="q6_num1">
+    <input type="text" id="q6_num2">
+    <input type="text" id="q6_num3">
+    <button type="button" onclick="val6()">6번문제</button>
+    <div id="result6"></div>
+
+    <input type="text" id="q7_str">
+    <button type="button" onclick="val7()">7번문제</button>
+    <div id="result7"></div>
+
+    <input type="text" id="q15_str">
+    <button type="button" onclick="val15()">15번문제</button>
+    <div id="result15"></div>
+
+    <script>
+        function val1(){
+            let num1 = document.getElementById('q1_num1').value;
+            let num2 = document.getElementById('q1_num2').value;
+            let num3 = document.getElementById('q1_num3').value;
+            let x = 0;
+            if(Number(num1) > Number(num2)){
+                x = Number(num1);
+            }else{
+                x = Number(num2);
+            }
+            if(Number(num3) > x){
+                x = num3;
+            }
+            document.getElementById('result1').innerHTML = x;
+        }
+
+        function val2(){
+            let num1 = document.getElementById('q2_num1').value;
+            let num2 = document.getElementById('q2_num2').value;
+            if(Math.abs(100 - Number(num1)) < Math.abs(100 - Number(num2))){
+                document.getElementById('result2').innerHTML = num1;
+            }else if(Math.abs(100 - Number(num1)) > Math.abs(100 - Number(num2))){
+                document.getElementById('result2').innerHTML = num2;
+            }else{
+                document.getElementById('result2').innerHTML = false;
+            }
+        }
+
+        function val3(){
+            let num1 = document.getElementById('q3_num1').value;
+            let num2 = document.getElementById('q3_num2').value;
+            if(Number(num1) >= 40 && Number(num1) <= 60 &&
+               Number(num2) >= 40 && Number(num2) <= 60 ||
+               Number(num1) >= 70 && Number(num1) <= 100 &&
+               Number(num2) >= 70 && Number(num2) <= 100 ){
+                document.getElementById('result3').innerHTML = true;
+               }else{
+                document.getElementById('result3').innerHTML = false;
+               }
+        }
+
+        function val4(){
+            let num1 = document.getElementById('q4_num1').value;
+            let num2 = document.getElementById('q4_num2').value;
+            let x = 0;
+            if(Number(num1) >= 40 && Number(num1) <= 60 &&
+               Number(num2) >= 40 && Number(num2) <= 60){
+                if(Number(num1) > Number(num2)){
+                    document.getElementById('result4').innerHTML = num1;
+                }else if(Number(num1) < Number(num2)){
+                    document.getElementById('result4').innerHTML = num2;
+                }else{
+                    document.getElementById('result4').innerHTML = false;
+                }
+               }else{
+                document.getElementById('result4').innerHTML = false;
+               }
+        }
+
+        function val5(){
+            let str1 = document.getElementById('q5_str1').value;
+            let str2 = document.getElementById('q5_str2').value;
+            if(str1.length < 2){
+                document.getElementById('result5').innerHTML = false;
+            }
+            for(let i = 1; i < 4; i++){
+                if(str1[i] == str2){
+                    document.getElementById('result5').innerHTML = true;
+                    break;
+                }else{
+                    document.getElementById('result5').innerHTML = false;
+                }
+            }
+        }
+
+        function val6(){
+            let num1 = document.getElementById('q6_num1').value;
+            let num2 = document.getElementById('q6_num2').value;
+            let num3 = document.getElementById('q6_num3').value;
+
+            let n1 = Number(num1)%10;
+            let n2 = Number(num2)%10;
+            let n3 = Number(num3)%10;
+
+            if(n1 == n2 && n1 ==n3){
+                document.getElementById('result6').innerHTML = true;
+            }else{
+                document.getElementById('result6').innerHTML = false;
+            }
+        }
+
+        function val7(){
+            let str = document.getElementById('q7_str').value;
+            if(str.length <3){
+                document.getElementById('result7').innerHTML = str.toUpperCase();
+            }else{
+                for(let i = 0; i < 3; i++){
+                    document.getElementById('result7').innerHTML = str.substring(0,3).toLowerCase() + str.substring(3, str.length);
+                }
+            }
+        }
+        function val15(){
+            const str = document.getElementById('q15_str').value;
+            let str2 = str.split(' ');
+            let x = '';
+            for(let i = 0; i < str2.length; i++){
+                let str3 = str2[i];
+                str3 = str3[0].toUpperCase() + str3.substring(1, str3.length);
+                x += str3 + ' ';
+            }
+            document.getElementById('result15').innerHTML = x;
+        }
+    </script>
+</body>
+</html>

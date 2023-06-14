@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("마스크 갯수", "0");
+        for(let x= parseInt(n/5); x>=0;x--){
+            for(let y=parseInt(n/3); y>=0; y--){
+                if(5*x + 3*y == n){
+                    document.write(x+y+"개 입니다.");
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

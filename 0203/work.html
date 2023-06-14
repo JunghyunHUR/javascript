@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let x = prompt("숫자", "0");
+        // let y =prompt("숫자2", "0");
+        // document.write(time(x,y));
+        // function time(a,b){
+        //     return a*b;
+        // }
+        //오늘의 온도를 입력 받아 화씨로 바꾸시오
+ 
+        // let tem = prompt("오늘의 온도는?", "0");
+        // document.write(s(tem)+"°F입니다");
+        // function s(a){
+        //     return (a*9/5)+32;
+        // }
+        var num = 10;
+        function gNum(){
+            console.log("함수 내부에서 변수 num을 확인한 결과"+num+"이 나옵니다.");
+            num = 20;
+        }
+        gNum();
+        console.log("함수 외부에서 변수num을 확인한 결과"+num+"이 나옵니다.");
+    </script>
+</body>
+</html>

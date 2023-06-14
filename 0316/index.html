@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="q1">
+    <button onclick="val1()">1번문제</button>
+    <div id="result1"></div>
+
+    <input type="text" id="q2">
+    <button onclick="val2()">2번문제</button>
+    <div id="result2"></div>
+
+    <input type="text" id="q3">
+    <button onclick="val3()">3번문제</button>
+    <div id="result3"></div>
+
+    <input type="text" id="q4">
+    <button onclick="val4()">4번문제</button>
+    <div id="result4"></div>
+
+    <input type="text" id="q5">
+    <button onclick="val5()">5번문제</button>
+    <div id="result5"></div>
+
+    <script>
+        function val1(){
+            const q = document.getElementById('q1').value;
+            const rs = q.split('').reverse().join('');
+            document.getElementById('result1').innerHTML = rs;
+        }
+
+        function val2(){
+            const q = document.getElementById('q2').value;
+            let str = q.length;
+            let rs = [];
+            let currentIndex = 0;
+            while(currentIndex < str){
+                let char = q.charAt(currentIndex);
+                let x;
+                let arrTemp = [char];
+                for(x in rs){
+                    arrTemp.push("" + rs[x] + char)
+                }
+                rs = rs.concat(arrTemp);
+                currentIndex++;
+            }
+            document.getElementById('result2').innerHTML = rs;
+        }
+
+        function val3(){
+            const q = document.getElementById('q3').value;
+            const rs = q.split('').sort().join('');
+            document.getElementById('result3').innerHTML = rs;
+        }
+
+        function val4(){
+            const q = document.getElementById('q4').value;
+            let str = q.split(' ');
+            let rs = [];
+            for(let i = 0; i < str.length; i++){
+                rs.push(str[i].charAt(0).toUpperCase()+str[i].slice(1));
+            }
+            document.getElementById('result4').innerHTML = rs.join(' ');
+        }
+
+        function val5(){
+            const q = document.getElementById('q5').value;
+            let vowels = 'aeiouy';
+            let count =0;
+            for(let char of q.toLowerCase()){
+                if(vowels.includes(char)){
+                    count++;
+                }
+            }
+            document.getElementById('result5').innerHTML = count;
+        }
+
+        // 1. 글자 또는 숫자를 거꾸로 반전 시키는 함수를 작성하라.
+        //     예) 32243  === > 34223,  안녕하세요 ===> 요세하녕안
+        // 2. 문자열의 모든 조합을 출력하는 함수를 작성하라.
+        //     예) dog  ==> d, o, do, g, dg, og, dog
+        // 3. 입력한 문자를 알파벳 순으로 정렬하여 출력하는 함수를 작성하라.
+        // 4. 문자열을 받아서 각 단어의 첫자를 대문자로 출력하는 함수를 작성하라.
+        //     예) the quick brown fox ==> The Quick Broun Fox
+        // 5. 문자열을 받아 문자열 내의 모음의 갯수를 출력하는 함수를 작성하라.
+    </script>
+</body>
+</html>

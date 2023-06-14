@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        //아래 배열에서 양의 정수 값만 출력하라
+        //비동기
+
+        // const myNum = [4, 1, -20, -7, 5, 9, -6];
+        // const posNum = removeNeg();
+        // document.getElementById("demo").innerHTML = posNum;
+
+        // function removeNeg(num, callback){
+
+        // }
+        
+        // setTimeout(function() {myFunction("사랑해요~~")}, 3000);
+
+        // function myFunction(value){
+        //     document.getElementById("demo").innerHTML = value;
+        // }
+        
+        //1초마다 숫자에 10을 더해주는 함수
+
+        // const _n10Add = function(num, callback){
+        //     setTimeout(function(){
+        //         callback(num+10);
+        //     }, 1000);
+        // }
+
+        const _n10Add = (num) => {
+            return new Promise((res) => {
+                setTimeout((res) => {
+                    res(num+10)
+                }, 1000)
+            })
+        }
+
+        //1초마다 20을 더해주는 함수
+
+        // const _n20Add = (num, callback) => {
+        //     setTimeout(() => {
+        //         callback(num+20);
+        //     }, 1000);
+        // }
+
+        const _n20Add = (num) => {
+            return new Promise((res) => {
+                setTimeout((res) => {
+                    res(num+20)
+                }, 1000)
+            })
+        }
+        
+        //1초마다 30을 더해주는 함수
+
+        // const _n30Add = (num, callback) => {
+        //     setTimeout(() => {
+        //         callback(num+30);
+        //     }, 1000);
+        // }
+
+        const _n30Add = (num) => {
+            return new Promise((res) => {
+                setTimeout((res) => {
+                    res(num+30)
+                }, 1000)
+            })
+        }
+
+        //콘솔에 출력
+        const numLog = (num) =>
+        new Promise(() => {
+            setTimeout(()=> console.log(num), 1000);
+        });
+        //출력하는 함수
+        // const rs =() => {
+        //     _n10Add(0, (callback) => {
+        //         _n20Add(callback, (callback2)=> {
+        //             _n30Add(callback2, (callback3)=>{
+        //                 numLog(callback3);
+        //             });
+        //         });
+        //     });
+        // }
+        
+        const rs = () => {
+            _n10Add(0)
+                .then((res)=>_n20Add(res))
+                .then((res)=>_n30Add(res))
+                .then((res)=>numLog(res));
+        }
+
+        rs();
+
+        // 어떠한 요청이 왔을 때 그 요청에 대한 응답을 기다리지 않고
+        // 다음 코드가 바로 수행되는 처리방식을 '비동기라'한다.
+
+    </script>
+</body>
+</html>

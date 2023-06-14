@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fNumber">
+    <input type="text" id="sNumber">
+    <button type="button" onclick="val()">4번 문제</button>
+    <button type="button" onclick="val2()">5번 문제</button>
+    <div id="result"></div>
+    <div id="result2"></div>
+
+
+    <script src="js/test.js"></script>
+    <script>
+        // 1번 문제
+        console.log(document.URL);
+
+        // 2번 문제
+        const fileName = 'test.jpg';
+        console.log(fileName.slice(fileName.lastIndexOf(".") + 1));
+
+        // 4번 문제
+        function val(){
+        const num1 = document.getElementById('fNumber').value;
+        const num2 = document.getElementById('sNumber').value;
+        if(num1 == num2){
+            document.getElementById('result').innerHTML = (Number(num1)+Number(num2))*3;  
+        }else{
+            document.getElementById('result').innerHTML = Number(num1)+Number(num2);
+        }
+        }
+        // 5번 문제
+        function val2(){
+            const num1 = document.getElementById('fNumber').value;
+            const num2 = document.getElementById('sNumber').value;
+            if(num1 == 50 || num2 == 50 || Number(num1)+Number(num2) === 50){
+                document.getElementById('result2').innerHTML = true;
+            }else{
+                document.getElementById('result2').innerHTML = false;
+            }
+        }
+    </script>
+</body>
+</html>
